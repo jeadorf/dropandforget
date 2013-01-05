@@ -1,0 +1,99 @@
+/**
+ * Copyright (c) 2013 Julius Adorf
+ *
+ * MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+* {
+    font-size: 10px;
+    font-family: monospace;
+    color: #222;
+    line-height: 1.8em;
+}
+
+body {
+    background-color: #ddf;
+}
+
+div#content {
+    margin: 20px auto;
+    width: 1192px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+div#left {
+    float: left;
+}
+
+div#right {
+    margin-left: 650px;
+}
+
+div#left div, div#right div {
+    margin: 0 auto 10px auto;
+    border: 1px solid #ddd;
+}
+
+div#left div {
+    width: 640px;
+}
+
+div#right div {
+    width: 540px;
+}
+
+h2 {
+    padding-left: 40px;
+    margin: 0;
+    background-color: #ddf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+    border-top: 1px solid #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+form {
+    padding: 10px;
+    margin: 0;
+}
+
+input[type='text'] {
+    width: 520px;
+    border: 1px solid #ddd;
+    padding: 2px 5px;
+    background-color: #deb;
+}
+
+input[type='submit'] {
+    background-color: white;
+    border: none;
+}
+
+a, a:visited, input[type='submit'] {
+    color: blue;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+a:hover, input[type='submit']:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+span.actions {
+  /* display: block;
+  float: left;*/
+  margin-right: 10px;
+}
+
