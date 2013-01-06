@@ -16,7 +16,7 @@ body {
 }
 
 div#content {
-    margin: 20px auto;
+    margin: 10px auto 5px auto;
     width: 1192px;
     padding: 20px;
     background-color: #fff;
@@ -41,6 +41,14 @@ div#left div {
 
 div#right div {
     width: 540px;
+}
+
+div#footer {
+    width: 1192px;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-size: x-small;
+    color: #666;
 }
 
 h2 {
