@@ -1,3 +1,7 @@
+VERSION=0.1-beta
+PACKAGE_NAME=dropandforget-$(VERSION)
+PACKAGE_FILES=dropandforget.html dropandforget.css dropandforget.js LICENSE.TXT
+
 srcs = src/*.js
 
 dropandforget.js: $(srcs)
@@ -18,3 +22,8 @@ test:
 
 jslint: $(srcs)
 	./node_modules/.bin/jslint --nomen --plusplus --browser $(srcs)
+
+.PHONY: package
+package:
+	tar cvzf $(PACKAGE_NAME).tar.gz $(PACKAGE_FILES)
+	zip $(PACKAGE_NAME).zip $(PACKAGE_FILES)
