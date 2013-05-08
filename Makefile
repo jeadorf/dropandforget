@@ -1,4 +1,4 @@
-VERSION=0.1-beta
+VERSION=0.1
 PACKAGE_NAME=dropandforget-$(VERSION)
 PACKAGE_FILES=dropandforget.html dropandforget.css dropandforget.js LICENSE.TXT
 
