@@ -61,7 +61,10 @@ ListView.prototype._insert_li = function (item) {
     }, false);
 
     li.append(this._action_box(item));
-    li.append("<span class='name'>" + item.get_name() + "</span>");
+    var span = $(document.createElement("span"));
+    span.addClass('name');
+    span.text(item.get_name());
+    li.append(span);
     li.hide();
     this._container.append(li);
     li.slideDown(200);
