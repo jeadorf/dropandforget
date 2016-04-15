@@ -43,6 +43,18 @@ div#right div {
     width: 540px;
 }
 
+div#importexport {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+div#importexport > div {
+    padding: 2px 5px;
+    margin-right: 10px;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
 div#footer {
     width: 1192px;
     padding: 0 20px;

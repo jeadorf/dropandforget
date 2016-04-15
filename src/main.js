@@ -174,6 +174,30 @@ function drop_enable(tag) {
     $(tag).parent().on("drop", drop(tag));
 }
 
+// Import / export functionality. This is really a little bit of hacky code
+// that operates directly on the local storage.
+
+var selected_file_to_import;
+
+function import_storage(evt) {
+	var reader = new FileReader();
+	reader.onload =
+		function(e) {
+          localStorage.data = e.target.result;
+		  window.location.reload();
+        };
+	reader.readAsText(selected_file_to_import);
+}
+
+function on_import_file_change(evt) {
+	selected_file_to_import = evt.target.files[0];
+}
+
+function export_storage() {
+	storage.save();
+	window.location.href = 'data:text/plain,' + localStorage.data;
+}
+
 $().ready(function () {
     inbox_view.set_container($(tag.INBOX));
     next_view.set_container($(tag.NEXT));
@@ -182,6 +206,9 @@ $().ready(function () {
     someday_view.set_container($(tag.SOMEDAY));
     $("#new_item").click(new_item);
     $("#save").click(function () { storage.save(); });
+    $("#export").click(export_storage);
+    $("#import").click(import_storage);
+    $('#import_file').change(on_import_file_change);
     storage.load();
 
     drop_enable(tag.INBOX);
