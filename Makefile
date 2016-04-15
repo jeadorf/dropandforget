@@ -5,7 +5,7 @@ PACKAGE_FILES=dropandforget.html dropandforget.css dropandforget.js LICENSE.TXT
 srcs = src/*.js
 
 dropandforget.js: $(srcs)
-	./node_modules/.bin/browserify --alias 'jquery:jquery-browserify' -e src/main.js | ./node_modules/.bin/uglifyjs -m - > dropandforget.js
+	./node_modules/.bin/browserify --alias 'jquery:jquery-browserify' -e src/main.js | ./node_modules/.bin/uglifyjs - -m > dropandforget.js
 
 modules:
 	npm install jslint
